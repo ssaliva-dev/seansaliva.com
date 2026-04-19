@@ -74,8 +74,12 @@ export default function Sidebar() {
               className="flex items-center gap-3"
               whileHover={{ scale: 1.02 }}
             >
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 flex items-center justify-center">
-                <span className="text-xl font-bold text-white">SS</span>
+              <div className="w-12 h-12 rounded-xl overflow-hidden border border-cyan-500/30 shadow-lg shadow-cyan-500/10 bg-slate-900">
+                <img
+                  src="/profile/sean-saliva-sidebar.jpg"
+                  alt="Sean Saliva"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <h1 className="text-lg font-semibold text-white tracking-tight">{profile.shortName}</h1>
