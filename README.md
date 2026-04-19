@@ -19,7 +19,7 @@ This project is configured to deploy with GitHub Pages through GitHub Actions.
 
 ### Custom domain
 
-The repo includes `public/CNAME` for `www.seansaliva.com`.
+The GitHub Pages custom domain is configured in the repository settings as `www.seansaliva.com`.
 
 For DNS, point:
 
