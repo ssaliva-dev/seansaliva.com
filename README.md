@@ -26,11 +26,11 @@ This project is configured to deploy from GitHub Actions to the live GoDaddy-hos
 ### Optional GitHub variables
 
 - `GODADDY_REMOTE_DIR`
-  Default: `public_html/`
+  Default: `/`
 - `GODADDY_FTP_PORT`
   Default: `21`
 - `GODADDY_FTP_PROTOCOL`
-  Default: `ftps`
+  Default: `ftp`
 - `GODADDY_FTP_SECURITY`
   Default: `strict`
 

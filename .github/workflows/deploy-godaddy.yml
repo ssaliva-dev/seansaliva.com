@@ -54,10 +54,10 @@ jobs:
           username: ${{ env.GODADDY_FTP_USERNAME }}
           password: ${{ env.GODADDY_FTP_PASSWORD }}
           port: ${{ vars.GODADDY_FTP_PORT || 21 }}
-          protocol: ${{ vars.GODADDY_FTP_PROTOCOL || 'ftps' }}
+          protocol: ${{ vars.GODADDY_FTP_PROTOCOL || 'ftp' }}
           security: ${{ vars.GODADDY_FTP_SECURITY || 'strict' }}
           local-dir: ./.deploy/
-          server-dir: ${{ vars.GODADDY_REMOTE_DIR || 'public_html/' }}
+          server-dir: ${{ vars.GODADDY_REMOTE_DIR || '/' }}
           state-name: .godaddy-sync-state.json
           exclude: |
             **/.git*
