@@ -214,14 +214,14 @@ export default function Contact() {
               <div className="space-y-4">
                 <a
                   href={profile.emailHref}
-                  className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/50 hover:bg-slate-800 transition-colors group"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/50 hover:bg-slate-800 transition-colors group min-w-0"
                 >
                   <div className="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center">
                     <Mail className="w-5 h-5 text-cyan-400" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <p className="text-sm text-slate-400">Email</p>
-                    <p className="text-white group-hover:text-cyan-400 transition-colors">
+                    <p className="text-xs leading-tight break-all text-white group-hover:text-cyan-400 transition-colors">
                       {profile.email}
                     </p>
                   </div>
