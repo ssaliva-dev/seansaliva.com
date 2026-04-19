@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion, AnimatePresence } from 'framer-motion';
+import { profile } from '@/components/resume/resumeData';
 import { 
   Home, 
   Globe, 
@@ -77,8 +78,8 @@ export default function Sidebar() {
                 <span className="text-xl font-bold text-white">SS</span>
               </div>
               <div>
-                <h1 className="text-lg font-semibold text-white tracking-tight">Sean Saliva</h1>
-                <p className="text-xs text-slate-400">Creative Technologist</p>
+                <h1 className="text-lg font-semibold text-white tracking-tight">{profile.shortName}</h1>
+                <p className="text-xs text-slate-400">{profile.tagline}</p>
               </div>
             </motion.div>
           </Link>
@@ -121,12 +122,12 @@ export default function Sidebar() {
 
         {/* Footer */}
         <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-slate-800/50">
-          <div className="flex items-center justify-center gap-2 text-slate-500 text-xs">
-            <div className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
-            <span>20+ Years of Excellence</span>
-          </div>
+        <div className="flex items-center justify-center gap-2 text-slate-500 text-xs">
+          <div className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
+          <span>25+ Years in Digital Leadership</span>
         </div>
-      </aside>
+      </div>
+    </aside>
     </>
   );
 }

@@ -66,7 +66,7 @@ foreach ($bad as $b) {
   }
 }
 
-$to = 's.saliva@yahoo.com'; // <-- YOUR receiving email
+$to = 's.saliva@thecreativemindsstudios.com';
 $subject = "New Contact Form Message from {$name}";
 
 $body = "You received a new message:\n\n"

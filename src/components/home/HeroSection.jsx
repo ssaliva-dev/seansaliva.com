@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { ArrowRight, Download, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { heroStats, profile } from '@/components/resume/resumeData';
 
 export default function HeroSection() {
   return (
@@ -36,7 +37,7 @@ export default function HeroSection() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 mb-8"
         >
           <Sparkles className="w-4 h-4 text-cyan-400" />
-          <span className="text-sm text-slate-300">Available for projects</span>
+          <span className="text-sm text-slate-300">Open to digital leadership opportunities</span>
           <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
         </motion.div>
 
@@ -47,10 +48,10 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight"
         >
-          Crafting Digital
+          Government Technology
           <br />
           <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Experiences
+            Leadership & Digital Delivery
           </span>
         </motion.h1>
 
@@ -61,8 +62,9 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          With over <span className="text-white font-semibold">20 years</span> of experience in web design, 
-          graphic design, video production, photography, and AI automation.
+          Municipal technology leader with over <span className="text-white font-semibold">25 years</span> of experience
+          building public-facing digital infrastructure, civic UX, and award-winning communication systems across
+          municipal, financial, e-commerce, and operational environments.
         </motion.p>
 
         {/* Stats */}
@@ -72,11 +74,7 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="flex flex-wrap justify-center gap-8 mb-12"
         >
-          {[
-            { value: '20+', label: 'Years Experience' },
-            { value: '500+', label: 'Projects Completed' },
-            { value: '5', label: 'Creative Disciplines' },
-          ].map((stat, i) => (
+          {heroStats.map((stat, i) => (
             <div key={i} className="text-center">
               <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                 {stat.value}
@@ -98,20 +96,21 @@ export default function HeroSection() {
               size="lg"
               className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0 px-8 py-6 text-lg rounded-xl"
             >
-              View My Work
+              Explore Portfolio
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </Link>
-          <Link to={createPageUrl('Resume')}>
-            <Button 
-              size="lg"
-              variant="outline"
-              className="border-slate-700 text-slate-300 hover:bg-slate-800 hover:text-white px-8 py-6 text-lg rounded-xl"
-            >
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="border-slate-700 bg-transparent text-slate-300 hover:bg-slate-800 hover:text-white px-8 py-6 text-lg rounded-xl"
+          >
+            <a href={profile.resumePath} target="_blank" rel="noopener noreferrer">
               <Download className="mr-2 w-5 h-5" />
-              Resume
-            </Button>
-          </Link>
+              Download Resume
+            </a>
+          </Button>
         </motion.div>
       </div>
 

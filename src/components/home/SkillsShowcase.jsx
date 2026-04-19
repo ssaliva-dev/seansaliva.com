@@ -2,46 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
-import { Globe, Palette, Video, Bot, Figma, ArrowRight } from 'lucide-react';
+import { Globe, Palette, Video, Bot, Figma, ArrowRight, Briefcase } from 'lucide-react';
+import { competencyCards } from '@/components/resume/resumeData';
 
-const skills = [
-  {
-    icon: Globe,
-    title: 'Web Design & Development',
-    description: 'Creating responsive, user-centric websites and web applications with cutting-edge technologies.',
-    page: 'WebDesign',
-    gradient: 'from-cyan-500 to-blue-500',
-  },
-  {
-    icon: Figma,
-    title: 'UI/UX Design',
-    description: 'Designing intuitive and beautiful user experiences through research, wireframing, and prototyping.',
-    page: 'UIUXDesign',
-    gradient: 'from-indigo-500 to-cyan-500',
-  },
-  {
-    icon: Palette,
-    title: 'Graphic Design',
-    description: 'Crafting visual identities, brand systems, and compelling graphics that communicate effectively.',
-    page: 'GraphicDesign',
-    gradient: 'from-purple-500 to-pink-500',
-  },
-  {
-    icon: Video,
-    title: 'Video Production',
-    description: 'Producing engaging video content from concept to final delivery, including motion graphics.',
-    page: 'VideoProduction',
-    gradient: 'from-orange-500 to-red-500',
-  },
-
-  {
-    icon: Bot,
-    title: 'AI Automation',
-    description: 'Leveraging artificial intelligence to streamline workflows and create innovative solutions.',
-    page: 'AIAutomation',
-    gradient: 'from-violet-500 to-purple-500',
-  },
-];
+const iconMap = {
+  'municipal-web': Globe,
+  'ux-accessibility': Figma,
+  broadcast: Video,
+  'ai-delivery': Bot,
+  'regulated-design': Palette,
+  leadership: Briefcase,
+};
 
 export default function SkillsShowcase() {
   return (
@@ -56,17 +27,17 @@ export default function SkillsShowcase() {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 tracking-tight">
-            Creative Expertise
+            Core Competencies
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Two decades of mastering diverse creative disciplines
+            Municipal delivery, civic UX, operational leadership, and AI-accelerated execution
           </p>
         </motion.div>
 
         {/* Skills Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {skills.map((skill, index) => {
-            const Icon = skill.icon;
+          {competencyCards.map((skill, index) => {
+            const Icon = iconMap[skill.key];
             return (
               <motion.div
                 key={skill.title}

@@ -6,106 +6,38 @@ import {
   Award,
   Mail,
   Globe,
-  Palette,
-  Video,
-  Camera,
-  Bot,
-  Code,
-  Figma,
   Download,
+  Linkedin,
+  MapPin,
+  Phone,
+  GraduationCap,
+  Users,
 } from "lucide-react";
 import SectionHeader from "@/components/ui/SectionHeader";
 import GlassCard from "@/components/ui/GlassCard";
 import { Badge } from "@/components/ui/badge";
-import { experiences } from "@/components/resume/resumeData";
-
-const skills = [
-  {
-    category: "Web Design & Development",
-    icon: Code,
-    items: [
-      "HTML/CSS",
-      "JavaScript",
-      "React",
-      "WordPress",
-      "Responsive Design",
-      "API Integration",
-    ],
-  },
-  {
-    category: "UI/UX Design",
-    icon: Figma,
-    items: [
-      "Figma",
-      "Adobe XD",
-      "User Research",
-      "Wireframing",
-      "Prototyping",
-      "Usability Testing",
-    ],
-  },
-  {
-    category: "Graphic Design",
-    icon: Palette,
-    items: [
-      "Adobe Photoshop",
-      "Adobe Illustrator",
-      "InDesign",
-      "Brand Identity",
-      "Print Design",
-      "Logo Design",
-    ],
-  },
-  {
-    category: "Video Production",
-    icon: Video,
-    items: [
-      "Adobe Premiere Pro",
-      "After Effects",
-      "DaVinci Resolve",
-      "Motion Graphics",
-      "Color Grading",
-      "Sound Design",
-    ],
-  },
-  {
-    category: "Photography",
-    icon: Camera,
-    items: [
-      "Portrait Photography",
-      "Product Photography",
-      "Lightroom",
-      "Photo Editing",
-      "Studio Lighting",
-      "Composition",
-    ],
-  },
-  {
-    category: "AI & Automation",
-    icon: Bot,
-    items: [
-      "AI Tools",
-      "Workflow Automation",
-      "ChatGPT",
-      "Midjourney",
-      "Process Optimization",
-      "Integration",
-    ],
-  },
-];
+import { Button } from "@/components/ui/button";
+import {
+  awards,
+  coreCompetencies,
+  education,
+  experiences,
+  organizations,
+  profile,
+} from "@/components/resume/resumeData";
 
 export default function Resume() {
   return (
     <div className="min-h-screen p-6 md:p-12">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <SectionHeader
           icon={FileText}
           title="Resume"
-          subtitle="Over 20 years of experience across multiple creative disciplines."
+          subtitle="Government technology leadership, municipal digital infrastructure, and public-facing UX across 25+ years of execution."
         />
 
         {/* Profile Card */}
-        <GlassCard className="p-8 mb-12">
+        <GlassCard className="p-8 mb-12" hover={false}>
           <div className="flex flex-col md:flex-row gap-8 items-start">
             {/* Avatar */}
             <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
@@ -115,88 +47,106 @@ export default function Resume() {
             {/* Info */}
             <div className="flex-1">
               <h2 className="text-3xl font-bold text-white mb-2">
-                Sean Saliva
+                {profile.name}
               </h2>
               <p className="text-xl text-cyan-400 mb-4">
-                Creative Technologist & Multi-Disciplinary Designer
+                {profile.role} | {profile.tagline}
               </p>
 
               <p className="text-slate-400 mb-6 leading-relaxed">
-                A seasoned creative professional with over two decades of
-                experience in web design, graphic design, video production,
-                photography, and AI automation. Passionate about leveraging
-                technology to create compelling visual experiences and
-                streamlined digital solutions.
+                {profile.summary}
+              </p>
+              <p className="text-slate-400 mb-6 leading-relaxed">
+                {profile.extendedSummary}
               </p>
 
-              <div className="flex flex-wrap gap-4">
+              <div className="grid sm:grid-cols-2 gap-4 mb-6">
+                <div className="flex items-center gap-2 text-slate-400 text-sm">
+                  <MapPin className="w-4 h-4 text-cyan-400" />
+                  <span>{profile.location}</span>
+                </div>
+                <div className="flex items-center gap-2 text-slate-400 text-sm">
+                  <Phone className="w-4 h-4 text-cyan-400" />
+                  <a href={profile.phoneHref} className="hover:text-cyan-400 transition-colors">
+                    {profile.phone}
+                  </a>
+                </div>
                 <div className="flex items-center gap-2 text-slate-400 text-sm">
                   <Mail className="w-4 h-4 text-cyan-400" />
-                  <span>
-                    <a href="mailto:s.saliva@yahoo.com">s.saliva@yahoo.com</a>
-                  </span>
+                  <a href={profile.emailHref} className="hover:text-cyan-400 transition-colors">
+                    {profile.email}
+                  </a>
                 </div>
                 <div className="flex items-center gap-2 text-slate-400 text-sm">
                   <Globe className="w-4 h-4 text-cyan-400" />
-                  <span>
-                    <a href="http://www.seansaliva.com/">www.seansaliva.com</a>
-                  </span>
+                  <a href={profile.website} className="hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
+                    {profile.websiteLabel}
+                  </a>
                 </div>
-                <a
-                  href="/resume/Sean-Saliva-2026.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-slate-400 text-sm hover:text-cyan-400 transition-colors"
+                <div className="flex items-center gap-2 text-slate-400 text-sm">
+                  <Linkedin className="w-4 h-4 text-cyan-400" />
+                  <a href={profile.linkedin} className="hover:text-cyan-400 transition-colors" target="_blank" rel="noopener noreferrer">
+                    {profile.linkedinLabel}
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <Button
+                  asChild
+                  className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0"
                 >
-                  <Download className="w-4 h-4 text-cyan-400" />
-                  <span>
-                    <a href="/resumes/Sean-Saliva-2026.pdf">Download Resume</a>
-                  </span>
-                </a>
+                  <a href={profile.resumePath} target="_blank" rel="noopener noreferrer">
+                    <Download className="w-4 h-4 mr-2" />
+                    Download Resume
+                  </a>
+                </Button>
+                <Button
+                  asChild
+                  variant="outline"
+                  className="border-slate-700 bg-transparent text-slate-300 hover:bg-slate-800 hover:text-white"
+                >
+                  <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="w-4 h-4 mr-2" />
+                    View LinkedIn
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
         </GlassCard>
 
-        {/* Skills Section */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-            <Award className="w-6 h-6 text-cyan-400" />
-            Skills & Expertise
-          </h3>
+        <div className="grid lg:grid-cols-2 gap-8 mb-12">
+          <GlassCard className="p-6" hover={false}>
+            <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+              <Award className="w-6 h-6 text-cyan-400" />
+              Professional Summary
+            </h3>
+            <p className="text-slate-400 leading-relaxed mb-4">
+              {profile.summary}
+            </p>
+            <p className="text-slate-400 leading-relaxed">
+              {profile.extendedSummary}
+            </p>
+          </GlassCard>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {skills.map((skillGroup, index) => {
-              const Icon = skillGroup.icon;
-              return (
-                <GlassCard
-                  key={skillGroup.category}
-                  className="p-5"
-                  delay={index * 0.1}
+          <GlassCard className="p-6" hover={false}>
+            <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
+              <Award className="w-6 h-6 text-cyan-400" />
+              Core Competencies
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {coreCompetencies.map((skill) => (
+                <Badge
+                  key={skill}
+                  variant="secondary"
+                  className="bg-slate-800/50 text-slate-300 border border-slate-700/50 text-xs"
                 >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-cyan-400" />
-                    </div>
-                    <h4 className="font-semibold text-white text-sm">
-                      {skillGroup.category}
-                    </h4>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {skillGroup.items.map((skill) => (
-                      <Badge
-                        key={skill}
-                        variant="secondary"
-                        className="bg-slate-800/50 text-slate-300 border border-slate-700/50 text-xs"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </GlassCard>
-              );
-            })}
-          </div>
+                  {skill}
+                </Badge>
+              ))}
+            </div>
+          </GlassCard>
         </div>
 
         {/* Experience Section */}
@@ -225,34 +175,33 @@ export default function Resume() {
                       <Briefcase className="w-4 h-4 text-cyan-400" />
                     </div>
 
-                    <GlassCard className="p-6">
+                    <GlassCard className="p-6" hover={false}>
                       <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-3">
                         <h4 className="text-lg font-semibold text-white">
                           {exp.role}
                         </h4>
                         <span className="text-sm text-cyan-400">
-                          {exp.start_year} - {exp.end_year || "Present"}
+                          {exp.start} - {exp.end}
                         </span>
                       </div>
-                      <p className="text-purple-400 mb-3">{exp.company}</p>
-                      {exp.description && (
-                        <p className="text-slate-400 text-sm mb-4">
-                          {exp.description}
-                        </p>
-                      )}
-                      {exp.skills && exp.skills.length > 0 && (
-                        <div className="flex flex-wrap gap-2">
-                          {exp.skills.map((skill) => (
-                            <Badge
-                              key={skill}
-                              variant="outline"
-                              className="border-slate-700 text-slate-400 text-xs"
-                            >
-                              {skill}
-                            </Badge>
-                          ))}
-                        </div>
-                      )}
+                      <p className="text-purple-400 mb-2">
+                        {exp.company}
+                        {exp.type ? ` | ${exp.type}` : ""}
+                      </p>
+                      <p className="text-slate-500 text-sm mb-4">{exp.location}</p>
+                      {exp.highlight ? (
+                        <Badge className="mb-4 bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">
+                          {exp.highlight}
+                        </Badge>
+                      ) : null}
+                      <ul className="space-y-3 text-slate-400 text-sm leading-relaxed">
+                        {exp.bullets.map((bullet) => (
+                          <li key={bullet} className="flex gap-3">
+                            <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-cyan-400 flex-shrink-0" />
+                            <span>{bullet}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </GlassCard>
                   </motion.div>
                 ))}
@@ -266,6 +215,82 @@ export default function Resume() {
               </p>
             </GlassCard>
           )}
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-8">
+          <GlassCard className="p-6" hover={false}>
+            <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+              <GraduationCap className="w-6 h-6 text-cyan-400" />
+              Education
+            </h3>
+            <div className="space-y-5">
+              {education.map((item) => (
+                <div key={`${item.institution}-${item.degree}`}>
+                  <p className="text-lg font-semibold text-white">
+                    {item.prefix ? `${item.prefix}, ` : ""}
+                    {item.degree}
+                  </p>
+                  <p className="text-purple-400">
+                    {item.institution}
+                    {item.year ? ` | ${item.year}` : ""}
+                  </p>
+                  {item.achievements ? (
+                    <div className="flex flex-wrap gap-2 mt-3">
+                      {item.achievements.map((achievement) => (
+                        <Badge
+                          key={achievement}
+                          variant="outline"
+                          className="border-slate-700 text-slate-400 text-xs"
+                        >
+                          {achievement}
+                        </Badge>
+                      ))}
+                    </div>
+                  ) : null}
+                </div>
+              ))}
+            </div>
+          </GlassCard>
+
+          <div className="space-y-8">
+            <GlassCard className="p-6" hover={false}>
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <Award className="w-6 h-6 text-cyan-400" />
+                Awards & Recognition
+              </h3>
+              <div className="space-y-4">
+                {awards.map((award) => (
+                  <div key={award.title}>
+                    <p className="text-lg font-semibold text-white">
+                      {award.title} ({award.year})
+                    </p>
+                    <p className="text-purple-400 mb-2">{award.issuer}</p>
+                    <p className="text-slate-400 text-sm leading-relaxed">
+                      {award.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </GlassCard>
+
+            <GlassCard className="p-6" hover={false}>
+              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                <Users className="w-6 h-6 text-cyan-400" />
+                Honors & Organizations
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {organizations.map((organization) => (
+                  <Badge
+                    key={organization}
+                    variant="outline"
+                    className="border-slate-700 text-slate-400 text-xs"
+                  >
+                    {organization}
+                  </Badge>
+                ))}
+              </div>
+            </GlassCard>
+          </div>
         </div>
       </div>
     </div>

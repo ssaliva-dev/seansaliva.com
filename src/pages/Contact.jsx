@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { profile } from "@/components/resume/resumeData";
 
 const socialLinks = [
   {
@@ -88,7 +89,7 @@ export default function Contact() {
         <SectionHeader
           icon={Mail}
           title="Get in Touch"
-          subtitle="Have a project in mind? Let's discuss how we can work together to bring your vision to life."
+          subtitle="Interested in digital services leadership, civic technology, or modernization work? Let's start the conversation."
         />
 
         <div className="grid md:grid-cols-5 gap-8">
@@ -163,7 +164,7 @@ export default function Contact() {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      placeholder="Tell me about your project..."
+                      placeholder="Tell me about the role, initiative, or project..."
                       required
                       rows={5}
                       className="pl-11 bg-slate-800/50 border-slate-700 text-white placeholder:text-slate-500 focus:border-cyan-500 focus:ring-cyan-500/20 resize-none"
@@ -206,13 +207,13 @@ export default function Contact() {
             <GlassCard className="p-6">
               <h3 className="text-lg font-semibold text-white mb-4">Connect</h3>
               <p className="text-slate-400 text-sm mb-6 leading-relaxed">
-                Feel free to reach out through any of these channels. I
-                typically respond within 24 hours.
+                Reach out for leadership opportunities, consulting engagements,
+                or digital modernization conversations. I typically respond within 24 hours.
               </p>
 
               <div className="space-y-4">
                 <a
-                  href="mailto:contact@seansaliva.com"
+                  href={profile.emailHref}
                   className="flex items-center gap-3 p-3 rounded-xl bg-slate-800/50 hover:bg-slate-800 transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-lg bg-cyan-500/20 flex items-center justify-center">
@@ -221,7 +222,7 @@ export default function Contact() {
                   <div>
                     <p className="text-sm text-slate-400">Email</p>
                     <p className="text-white group-hover:text-cyan-400 transition-colors">
-                      <a href="mailto:s.saliva@yahoo.com">s.saliva@yahoo.com</a>
+                      {profile.email}
                     </p>
                   </div>
                 </a>
@@ -252,11 +253,11 @@ export default function Contact() {
               <div className="flex items-center gap-2 mb-2">
                 <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                 <span className="text-sm text-green-400">
-                  Available for projects
+                  Open to leadership opportunities
                 </span>
               </div>
               <p className="text-slate-400 text-sm">
-                Currently accepting new clients and exciting opportunities.
+                Available for full-time leadership roles, consulting engagements, and strategic digital conversations.
               </p>
             </GlassCard>
           </div>
