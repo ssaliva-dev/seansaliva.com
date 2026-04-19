@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { createPageUrl } from '@/utils';
 import { motion, AnimatePresence } from 'framer-motion';
 import { profile } from '@/components/resume/resumeData';
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { 
   Home, 
   Globe, 
@@ -69,24 +70,41 @@ export default function Sidebar() {
       >
         {/* Logo Area */}
         <div className="p-8 border-b border-slate-800/50">
-          <Link to={createPageUrl('Home')} onClick={() => setIsOpen(false)}>
-            <motion.div 
-              className="flex items-center gap-3"
-              whileHover={{ scale: 1.02 }}
-            >
-              <div className="w-12 h-12 rounded-xl overflow-hidden border border-cyan-500/30 shadow-lg shadow-cyan-500/10 bg-slate-900">
+          <motion.div 
+            className="flex items-center gap-3"
+            whileHover={{ scale: 1.02 }}
+          >
+            <Dialog>
+              <DialogTrigger asChild>
+                <button
+                  type="button"
+                  aria-label="Open profile image"
+                  className="w-12 h-12 rounded-xl overflow-hidden border border-cyan-500/30 shadow-lg shadow-cyan-500/10 bg-slate-900 cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-cyan-500/50"
+                >
+                  <img
+                    src="/profile/sean-saliva-sidebar.jpg"
+                    alt="Sean Saliva"
+                    className="w-full h-full object-cover"
+                  />
+                </button>
+              </DialogTrigger>
+              <DialogContent className="max-w-3xl p-0 border border-slate-700/50 bg-slate-950/95 overflow-hidden">
+                <DialogTitle className="sr-only">Sean Saliva profile photo</DialogTitle>
+                <DialogDescription className="sr-only">
+                  Expanded profile image preview.
+                </DialogDescription>
                 <img
                   src="/profile/sean-saliva-sidebar.jpg"
                   alt="Sean Saliva"
-                  className="w-full h-full object-cover"
+                  className="w-full h-auto max-h-[85vh] object-contain"
                 />
-              </div>
-              <div>
-                <h1 className="text-lg font-semibold text-white tracking-tight">{profile.shortName}</h1>
-                <p className="text-xs text-slate-400">{profile.tagline}</p>
-              </div>
-            </motion.div>
-          </Link>
+              </DialogContent>
+            </Dialog>
+            <Link to={createPageUrl('Home')} onClick={() => setIsOpen(false)} className="min-w-0">
+              <h1 className="text-lg font-semibold text-white tracking-tight">{profile.shortName}</h1>
+              <p className="text-xs text-slate-400">{profile.tagline}</p>
+            </Link>
+          </motion.div>
         </div>
 
         {/* Navigation */}
