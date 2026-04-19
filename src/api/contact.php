@@ -3,11 +3,14 @@
 
 header('Content-Type: application/json; charset=utf-8');
 
-// If your React app is on the SAME domain, you don't need CORS.
-// If it's on a different domain/subdomain, set the exact origin:
-$allowed_origin = 'https://seansaliva.com'; // <-- change
-if (!empty($_SERVER['HTTP_ORIGIN']) && $_SERVER['HTTP_ORIGIN'] === $allowed_origin) {
-  header("Access-Control-Allow-Origin: $allowed_origin");
+// Allow the production domains to post to the contact endpoint.
+$allowed_origins = [
+  'https://seansaliva.com',
+  'https://www.seansaliva.com',
+];
+
+if (!empty($_SERVER['HTTP_ORIGIN']) && in_array($_SERVER['HTTP_ORIGIN'], $allowed_origins, true)) {
+  header('Access-Control-Allow-Origin: ' . $_SERVER['HTTP_ORIGIN']);
   header("Access-Control-Allow-Methods: POST, OPTIONS");
   header("Access-Control-Allow-Headers: Content-Type");
 }
@@ -73,7 +76,7 @@ $body = "You received a new message:\n\n"
 
 $headers = [];
 // Use a domain email here for best deliverability (not the user's email)
-$headers[] = 'From: Website Contact <no-reply@yourdomain.com>'; // <-- change to your domain
+$headers[] = 'From: Website Contact <no-reply@seansaliva.com>';
 $headers[] = "Reply-To: {$email}";
 $headers[] = 'X-Mailer: PHP/' . phpversion();
 

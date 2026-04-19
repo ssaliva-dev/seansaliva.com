@@ -10,25 +10,37 @@ This is the standalone React + Vite source for `seansaliva.com`.
 
 ## GitHub deployment
 
-This project is configured to deploy with GitHub Pages through GitHub Actions.
+This project is configured to deploy from GitHub Actions to the live GoDaddy-hosted site.
 
 1. Create a GitHub repository for this project
 2. Push the `main` branch to GitHub
-3. In the repository settings, set Pages to deploy from GitHub Actions
-4. Point the custom domain DNS to GitHub Pages
+3. Add the required GitHub secrets and variables
+4. Push to `main` to deploy to GoDaddy automatically
 
-### Custom domain
+### Required GitHub secrets
 
-The GitHub Pages custom domain is configured in the repository settings as `www.seansaliva.com`.
+- `GODADDY_FTP_HOST`
+- `GODADDY_FTP_USERNAME`
+- `GODADDY_FTP_PASSWORD`
 
-For DNS, point:
+### Optional GitHub variables
 
-- `www.seansaliva.com` to your GitHub Pages hostname with a `CNAME`
-- `seansaliva.com` to GitHub Pages apex records if you want the root domain to redirect or serve the same site
+- `GODADDY_REMOTE_DIR`
+  Default: `public_html/`
+- `GODADDY_FTP_PORT`
+  Default: `21`
+- `GODADDY_FTP_PROTOCOL`
+  Default: `ftps`
+- `GODADDY_FTP_SECURITY`
+  Default: `strict`
 
-### SPA routing
+### Deploy contents
 
-The deploy workflow copies `index.html` to `404.html` during deployment so React Router routes keep working on GitHub Pages.
+Each deployment uploads:
+
+- the Vite production build
+- `api/contact.php` for the contact form
+- an Apache `.htaccess` file for SPA route rewrites
 
 ## Notes
 
