@@ -10,8 +10,8 @@ export const profile = {
   emailHref: "mailto:s.saliva@thecreativemindsstudios.com",
   website: "https://www.seansaliva.com/",
   websiteLabel: "seansaliva.com",
-  linkedin: "https://www.linkedin.com/in/sean-saliva/",
-  linkedinLabel: "linkedin.com/in/sean-saliva",
+  linkedin: "https://www.linkedin.com/in/sean-saliva-ba45a43b8/",
+  linkedinLabel: "linkedin.com/in/sean-saliva-ba45a43b8",
   resumePath: "/resumes/Sean-Saliva-GovTech-2026-v2.pdf",
   availability:
     "Open to digital services leadership, civic technology, and modernization opportunities.",

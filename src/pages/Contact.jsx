@@ -22,7 +22,7 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://www.linkedin.com/in/sean-saliva/",
+    url: "https://www.linkedin.com/in/sean-saliva-ba45a43b8/",
     color: "hover:text-blue-400",
   },
   {
