@@ -8,7 +8,7 @@ import { heroStats, profile } from '@/components/resume/resumeData';
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden pt-16 md:pt-20">
       {/* Animated Background Grid */}
       <div className="absolute inset-0 opacity-20">
         <div 
