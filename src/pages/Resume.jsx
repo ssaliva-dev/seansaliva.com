@@ -40,8 +40,12 @@ export default function Resume() {
         <GlassCard className="p-8 mb-12" hover={false}>
           <div className="flex flex-col md:flex-row gap-8 items-start">
             {/* Avatar */}
-            <div className="w-32 h-32 rounded-2xl bg-gradient-to-br from-cyan-500 via-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0">
-              <span className="text-4xl font-bold text-white">SS</span>
+            <div className="w-32 h-32 rounded-2xl overflow-hidden border border-cyan-500/30 shadow-lg shadow-cyan-500/10 bg-slate-900 flex-shrink-0">
+              <img
+                src="/profile/sean-saliva-sidebar.jpg"
+                alt={profile.name}
+                className="w-full h-full object-cover"
+              />
             </div>
 
             {/* Info */}
