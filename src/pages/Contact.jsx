@@ -221,7 +221,7 @@ export default function Contact() {
                   </div>
                   <div className="min-w-0">
                     <p className="text-sm text-slate-400">Email</p>
-                    <p className="text-xs leading-tight break-all text-white group-hover:text-cyan-400 transition-colors">
+                    <p className="text-[10px] leading-none whitespace-nowrap tracking-tight text-white group-hover:text-cyan-400 transition-colors">
                       {profile.email}
                     </p>
                   </div>
