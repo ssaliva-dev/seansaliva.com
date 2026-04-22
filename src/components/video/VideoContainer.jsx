@@ -139,7 +139,7 @@ export default function VideoContainer({ video, index }) {
             {video.title}
           </h3>
           {video.year && (
-            <Badge variant="outline" className="flex items-center gap-1 bg-slate-800/50 border-slate-700">
+            <Badge variant="outline" className="flex items-center gap-1 bg-slate-800/50 border-slate-700 text-white">
               <Calendar className="w-3 h-3" />
               {video.year}
             </Badge>
