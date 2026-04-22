@@ -28,6 +28,10 @@ export default function VideoContainer({ video, index }) {
   const youtubeThumbnailUrl = videoId
     ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
     : null;
+  const customThumbnailUrl = video.thumbnail_url
+    ? encodeURI(video.thumbnail_url)
+    : (video.image_url ? encodeURI(video.image_url) : null);
+  const previewThumbnailUrl = customThumbnailUrl || youtubeThumbnailUrl;
   const externalUrl = video.youtube_url ? encodeURI(video.youtube_url) : null;
 
   return (
@@ -60,13 +64,23 @@ export default function VideoContainer({ video, index }) {
                 className="group relative block w-full h-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-500/60 focus:ring-offset-2 focus:ring-offset-slate-950"
                 aria-label={`Play ${video.title} in lightbox`}
               >
-                {youtubeThumbnailUrl ? (
+                {previewThumbnailUrl ? (
                   <img
-                    src={youtubeThumbnailUrl}
+                    src={previewThumbnailUrl}
                     alt={`${video.title} thumbnail`}
                     className="w-full h-full object-cover"
                     loading="lazy"
                   />
+                ) : localVideoUrl ? (
+                  <video
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="w-full h-full object-cover pointer-events-none"
+                    aria-hidden="true"
+                  >
+                    <source src={localVideoUrl} type="video/mp4" />
+                  </video>
                 ) : (
                   <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-black" />
                 )}

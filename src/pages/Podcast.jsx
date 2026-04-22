@@ -51,17 +51,26 @@ export default function Podcast() {
           <section className="xl:col-span-2 rounded-2xl border border-slate-800/60 bg-slate-900/40 backdrop-blur-sm p-4 md:p-6">
             <div
               id={BUZZSPROUT_CONTAINER_ID}
-              className="w-full min-h-[540px] rounded-xl overflow-hidden"
+              className="w-full h-[700px] md:h-[760px] rounded-xl overflow-hidden"
             />
+            <style>{`
+              #${BUZZSPROUT_CONTAINER_ID},
+              #${BUZZSPROUT_CONTAINER_ID} > div,
+              #${BUZZSPROUT_CONTAINER_ID} iframe {
+                width: 100%;
+                height: 100% !important;
+                min-height: 700px;
+              }
+            `}</style>
           </section>
 
           <aside className="space-y-6">
             <div className="rounded-2xl border border-cyan-500/20 bg-slate-900/50 p-6">
               <h3 className="text-lg font-semibold text-white mb-3">Mission</h3>
               <p className="text-slate-300 leading-relaxed">
-                My mission is to help leaders and teams turn complex digital goals
-                into practical execution by sharing proven strategies for content,
-                UX, automation, and public-sector communication.
+                The Partisan Games Podcast is a civic-first podcast that rebuilds
+                political conversation by restoring shared facts, clear rules, and
+                real understanding — before outrage and opinion take over.
               </p>
             </div>
 
@@ -70,9 +79,16 @@ export default function Podcast() {
                 Why I Created This Podcast
               </h3>
               <p className="text-slate-300 leading-relaxed">
-                I created this podcast to document lessons learned from real projects,
-                spotlight what is working in the field, and give professionals a clear,
-                no-fluff resource they can apply immediately to improve outcomes.
+                The Partisan Games Podcast is dedicated to transcending the tumultuous
+                landscape of contemporary politics by fostering a sanctuary of informed
+                discourse, critical thinking, and respectful engagement. Our mission is
+                to elevate the political conversation beyond the confines of
+                partisanship, providing our listeners with a platform that not only
+                enlightens but also empowers them to navigate the complexities of
+                political issues with understanding and integrity. Through diverse
+                perspectives, expert insights, and a commitment to factual accuracy, we
+                aim to contribute positively to the political discourse, encouraging
+                active and informed civic participation
               </p>
             </div>
           </aside>
