@@ -13,7 +13,7 @@ export default function VideoProduction() {
         <SectionHeader
           icon={Video}
           title="Video Production"
-          subtitle="Producing engaging video content from concept to final delivery, including motion graphics and post-production."
+          subtitle="Producing engaging video content from concept to final delivery with complete end-to-end ownership, including concept development, scriptwriting, voice-over, motion graphics, editing, and post-production."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
