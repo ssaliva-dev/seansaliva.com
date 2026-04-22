@@ -178,6 +178,30 @@ export const projects = [
     link: "/videos/TPO-on-the-Go-FIU-8-26-25-v2.mp4",
     year: 2025,
   },
+  {
+    id: "17",
+    title: "Ride Safe Florida 2025 Public Safety PSA Video",
+    category: "video_production",
+    description:
+      "Public service announcement for the Ride Safe Florida 2025 campaign, promoting safer roadway behavior, stronger public awareness, and responsible travel across Florida communities.",
+    video_url: "/videos/Ride-Safe-Florida-PSA-2025-v10.mp4",
+    thumbnail_url: "/video-thumbnails/Ride-Safe-Florida-PSA-2025-v10.mp4.png",
+    tags: ["Ride Safe Florida", "PSA", "Road Safety", "Public Awareness"],
+    link: "/videos/Ride-Safe-Florida-PSA-2025-v10.mp4",
+    year: 2025,
+  },
+  {
+    id: "18",
+    title: "We Are ISC Brand Story Video",
+    category: "video_production",
+    description:
+      "Brand story video introducing ISC’s mission, team culture, and service capabilities through cinematic storytelling designed to strengthen audience trust and stakeholder engagement.",
+    video_url: "/videos/We-Are-ISC-Video-v2.mp4",
+    thumbnail_url: "/video-thumbnails/We-Are-ISC-Video-v2.mp4.png",
+    tags: ["ISC", "Brand Story", "Corporate Video", "Stakeholder Engagement"],
+    link: "/videos/We-Are-ISC-Video-v2.mp4",
+    year: 2025,
+  },
 ];
 
 // Helper function to get projects by category
