@@ -1,7 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
-import { Calendar, ExternalLink } from 'lucide-react';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog';
+import { Calendar, ExternalLink, Play } from 'lucide-react';
 
 export default function VideoContainer({ video, index }) {
   // Extract YouTube video ID from URL
@@ -13,25 +20,96 @@ export default function VideoContainer({ video, index }) {
   };
 
   const videoId = getYouTubeId(video.youtube_url);
+  const localVideoUrl = video.video_url ? encodeURI(video.video_url) : null;
+  const hasPlayableVideo = Boolean(videoId || localVideoUrl);
+  const youtubeEmbedUrl = videoId
+    ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`
+    : null;
+  const youtubeThumbnailUrl = videoId
+    ? `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`
+    : null;
+  const externalUrl = video.youtube_url ? encodeURI(video.youtube_url) : null;
 
   return (
-    <motion.div
+    <motion.article
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-800/50 overflow-hidden hover:border-cyan-500/30 transition-all duration-300"
+      itemScope
+      itemType="https://schema.org/VideoObject"
     >
+      <meta itemProp="name" content={video.title} />
+      <meta itemProp="description" content={video.description} />
+      {video.tags?.length > 0 && (
+        <meta itemProp="keywords" content={video.tags.join(', ')} />
+      )}
+      {video.year && (
+        <meta itemProp="datePublished" content={`${video.year}-01-01`} />
+      )}
+      {localVideoUrl && <meta itemProp="contentUrl" content={localVideoUrl} />}
+      {video.youtube_url && <meta itemProp="embedUrl" content={video.youtube_url} />}
+
       {/* Video Player */}
       <div className="relative w-full aspect-video bg-slate-950">
-        {videoId ? (
-          <iframe
-            src={`https://www.youtube.com/embed/${videoId}`}
-            title={video.title}
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          />
+        {hasPlayableVideo ? (
+          <Dialog>
+            <DialogTrigger asChild>
+              <button
+                type="button"
+                className="group relative block w-full h-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-cyan-500/60 focus:ring-offset-2 focus:ring-offset-slate-950"
+                aria-label={`Play ${video.title} in lightbox`}
+              >
+                {youtubeThumbnailUrl ? (
+                  <img
+                    src={youtubeThumbnailUrl}
+                    alt={`${video.title} thumbnail`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-black" />
+                )}
+                <div className="absolute inset-0 bg-slate-950/45 group-hover:bg-slate-950/25 transition-colors duration-300" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-cyan-500/90 px-4 py-2 text-sm font-semibold text-slate-950 shadow-lg shadow-cyan-500/25">
+                    <Play className="w-4 h-4 fill-slate-950" />
+                    Watch Video
+                  </span>
+                </div>
+              </button>
+            </DialogTrigger>
+
+            <DialogContent className="w-[95vw] max-w-6xl p-0 border border-slate-700/60 bg-slate-950/95 overflow-hidden">
+              <DialogTitle className="sr-only">{video.title}</DialogTitle>
+              <DialogDescription className="sr-only">
+                Expanded video player in a lightbox modal.
+              </DialogDescription>
+              <div className="w-full aspect-video bg-black">
+                {youtubeEmbedUrl ? (
+                  <iframe
+                    src={youtubeEmbedUrl}
+                    title={`${video.title} player`}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    className="w-full h-full"
+                  />
+                ) : (
+                  <video
+                    controls
+                    autoPlay
+                    preload="metadata"
+                    className="w-full h-full"
+                    title={`${video.title} player`}
+                  >
+                    <source src={localVideoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
+              </div>
+            </DialogContent>
+          </Dialog>
         ) : (
           <div className="w-full h-full flex items-center justify-center text-slate-600">
             <p>No video available</p>
@@ -74,18 +152,18 @@ export default function VideoContainer({ video, index }) {
         )}
 
         {/* YouTube Link */}
-        {video.youtube_url && (
+        {externalUrl && (
           <a
-            href={video.youtube_url}
+            href={externalUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
           >
             <ExternalLink className="w-4 h-4" />
-            View Project Details
+            {video.youtube_url ? 'Watch on YouTube' : 'Watch Full Video'}
           </a>
         )}
       </div>
-    </motion.div>
+    </motion.article>
   );
 }

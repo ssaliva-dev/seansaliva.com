@@ -48,15 +48,14 @@ export const projects = [
   },
   {
     id: "5",
-    title: "FDOT Project Update Video",
+    title: "SR 5 / US 1 Biscayne Boulevard Improvement Project Video",
     category: "video_production",
     description:
-      "This SR5/US1/Biscayne Blvd Improvement Project video highlights critical roadway enhancements and transportation planning efforts designed to improve mobility, safety, and connectivity in the area.",
-    youtube_url: "https://youtu.be/KFZygpwSGr0",
-    image_url: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4",
-    tags: ["After Effects", "Premier Pro", "Motion Graphics", "Voice Over"],
-    link: "https://youtu.be/KFZygpwSGr0",
-    year: 2024,
+      "Transportation planning and infrastructure update video for the SR 5 / US 1 Biscayne Boulevard corridor, featuring roadway improvement highlights, mobility goals, and public-facing project communication for South Florida audiences.",
+    video_url: "/videos/SR5-US1-Biscyane-Blvd-Video-v7.mp4",
+    tags: ["Transportation Planning", "Roadway Improvements", "Public Outreach", "South Florida"],
+    link: "/videos/SR5-US1-Biscyane-Blvd-Video-v7.mp4",
+    year: 2025,
   },
   {
     id: "6",
@@ -109,16 +108,14 @@ export const projects = [
   },
   {
     id: "10",
-    title: "SEFTC Regional Transportation Plan Video",
+    title: "Miami-Dade TPO 2050 LRTP Vision and Strategy Video",
     category: "video_production",
     description:
-      "At Creative Minds Studios, we had the opportunity to produce an engaging and informative video for the Southeast Florida Transportation Council (SEFTC), highlighting their Regional Transportation Plan (RTP).",
-    youtube_url: "https://youtu.be/oGcBFNnT-vs",
-    image_url:
-      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800",
-    tags: ["After Effects", "Premier Pro", "Motion Graphics"],
-    link: "https://youtu.be/oGcBFNnT-vs",
-    year: 2024,
+      "Long Range Transportation Plan (LRTP) video produced for the Miami-Dade TPO to communicate the 2050 mobility vision, regional transit priorities, and strategic transportation investments across Miami-Dade County.",
+    video_url: "/videos/MDTPO-2050-LRTP-2025-Video-v3.mp4",
+    tags: ["LRTP 2050", "Miami-Dade TPO", "Regional Transit", "Transportation Strategy"],
+    link: "/videos/MDTPO-2050-LRTP-2025-Video-v3.mp4",
+    year: 2025,
   },
   {
     id: "11",
@@ -135,16 +132,14 @@ export const projects = [
   },
   {
     id: "12",
-    title: "Ride Smart Florida Kickoff Video",
+    title: "Ride Smart Florida Kickoff Safety Campaign Video",
     category: "video_production",
     description:
-      "Check out the Ride Smart Florida Kickoff video, a standout portfolio piece from Creative Minds Studios, highlighting our expertise in dynamic video production, motion graphics, and storytelling.",
-    youtube_url: "https://youtu.be/7lWCPbiRqUY",
-    image_url:
-      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=800",
-    tags: ["After Effects", "Premier Pro", "Motion Graphics"],
-    link: "https://youtu.be/7lWCPbiRqUY",
-    year: 2023,
+      "Public safety kickoff video for Ride Smart Florida designed to drive awareness, reinforce safe transportation behavior, and support statewide outreach through engaging visual storytelling and campaign messaging.",
+    video_url: "/videos/Ride-Smart-Florida-Kickoff-v8.mp4",
+    tags: ["Safety Campaign", "Public Service Messaging", "Florida Outreach", "Video Storytelling"],
+    link: "/videos/Ride-Smart-Florida-Kickoff-v8.mp4",
+    year: 2024,
   },
   {
     id: "13",
@@ -155,6 +150,39 @@ export const projects = [
     image_url: "/img/Blog-Automation.png",
     tags: ["n8n", "JavaScript", "APIs", "ChatGPT", "Wordpress"],
     featured: true,
+    year: 2025,
+  },
+  {
+    id: "14",
+    title: "FDOT Golden Glades Interchange Work Program Video",
+    category: "video_production",
+    description:
+      "FDOT work program video highlighting the Golden Glades Interchange improvements, project phasing, and transportation benefits focused on congestion relief, roadway safety, and regional connectivity.",
+    video_url: "/videos/FDOT WP - Golden Glades Interchange-Video-v3.mp4",
+    tags: ["FDOT", "Golden Glades Interchange", "Work Program", "Infrastructure Communications"],
+    link: "/videos/FDOT WP - Golden Glades Interchange-Video-v3.mp4",
+    year: 2025,
+  },
+  {
+    id: "15",
+    title: "SMART M.A.P. 2050 LRTP Public Involvement Recap Video",
+    category: "video_production",
+    description:
+      "Public involvement recap video for the SMART M.A.P. 2050 Long Range Transportation Plan, summarizing community engagement, stakeholder feedback, and regional mobility priorities.",
+    video_url: "/videos/SMART M.A.P. 2050 LRTP Public Involvement Recap.mp4",
+    tags: ["SMART M.A.P.", "Public Involvement", "Community Engagement", "LRTP 2050"],
+    link: "/videos/SMART M.A.P. 2050 LRTP Public Involvement Recap.mp4",
+    year: 2025,
+  },
+  {
+    id: "16",
+    title: "TPO on the Go at FIU Transportation Outreach Video",
+    category: "video_production",
+    description:
+      "Transportation outreach video covering the TPO on the Go activation at Florida International University (FIU), featuring event highlights, student engagement, and regional transportation planning education.",
+    video_url: "/videos/TPO-on-the-Go-FIU-8-26-25-v2.mp4",
+    tags: ["TPO on the Go", "FIU", "Transportation Outreach", "Public Engagement"],
+    link: "/videos/TPO-on-the-Go-FIU-8-26-25-v2.mp4",
     year: 2025,
   },
 ];

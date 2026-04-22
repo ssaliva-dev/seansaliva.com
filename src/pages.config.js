@@ -2,6 +2,7 @@ import AIAutomation from './pages/AIAutomation';
 import Contact from './pages/Contact';
 import GraphicDesign from './pages/GraphicDesign';
 import Home from './pages/Home';
+import Podcast from './pages/Podcast';
 import ProjectDetail from './pages/ProjectDetail';
 import Resume from './pages/Resume';
 import UIUXDesign from './pages/UIUXDesign';
@@ -15,6 +16,7 @@ export const PAGES = {
     "Contact": Contact,
     "GraphicDesign": GraphicDesign,
     "Home": Home,
+    "Podcast": Podcast,
     "ProjectDetail": ProjectDetail,
     "Resume": Resume,
     "UIUXDesign": UIUXDesign,
