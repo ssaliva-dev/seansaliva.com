@@ -108,6 +108,20 @@ export const projects = [
     year: 2023,
   },
   {
+    id: "20",
+    title: "AI Systems Builders Website",
+    category: "web_design",
+    description:
+      "Designed and developed the AI Systems Builders website to clearly present automation services, build trust quickly, and guide visitors toward conversion actions.",
+    fullDescription:
+      "Built the AI Systems Builders website as a clean, conversion-focused platform that explains complex AI automation services in plain language and directs prospects toward the next step. The project focused on strong messaging hierarchy, clear service pathways, fast-loading page structure, and responsive layouts that maintain visual clarity across devices. From landing experience to call-to-action flow, the site is structured to reinforce credibility and make it easy for business owners to understand offerings and request a consultation.",
+    image_url: "/img/CreativeMindsStudios.png",
+    tags: ["Wordpress", "Automation", "Lead Generation", "UI/UX Design"],
+    link: "https://www.aissystemsbuilders.com",
+    featured: true,
+    year: 2026,
+  },
+  {
     id: "10",
     title: "Miami-Dade TPO 2050 LRTP Vision and Strategy Video",
     category: "video_production",
