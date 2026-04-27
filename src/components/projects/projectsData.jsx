@@ -122,6 +122,20 @@ export const projects = [
     year: 2026,
   },
   {
+    id: "21",
+    title: "Big Dog Apparel Website",
+    category: "web_design",
+    description:
+      "Designed and developed the Big Dog Apparel e-commerce website to showcase bold streetwear products and drive product discovery through a clear shopping experience.",
+    fullDescription:
+      "Built Big Dog Apparel as a modern e-commerce website focused on brand identity, merchandising clarity, and conversion flow. The project combined strong visual direction with practical shopping UX, making it easy for customers to browse collections, evaluate products, and complete purchases across desktop and mobile. From homepage storytelling to product navigation and call-to-action structure, the site is designed to support growth while keeping the brand's voice strong and consistent.",
+    image_url: "/img/big-dog-apparel-site.png",
+    tags: ["E-commerce", "UI/UX Design", "Brand Experience", "Conversion Focus"],
+    link: "https://www.bigdogapparel.co",
+    featured: true,
+    year: 2026,
+  },
+  {
     id: "10",
     title: "Miami-Dade TPO 2050 LRTP Vision and Strategy Video",
     category: "video_production",
