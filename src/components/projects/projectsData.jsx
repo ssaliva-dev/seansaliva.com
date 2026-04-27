@@ -202,6 +202,18 @@ export const projects = [
     link: "/videos/We-Are-ISC-Video-v2.mp4",
     year: 2025,
   },
+  {
+    id: "19",
+    title: "Miami Beach Transportation Proposal and Mobility Vision Video",
+    category: "video_production",
+    description:
+      "Proposal overview video presenting Miami Beach transportation priorities, mobility strategies, and community-focused improvements through clear civic storytelling and accessible public communication.",
+    video_url: "/videos/Miami-Beach-Proposal-Video-v4.mp4",
+    thumbnail_url: "/video-thumbnails/Miami-Beach-Proposal-Video-v4.mp4.png",
+    tags: ["Miami Beach", "Transportation Proposal", "Mobility Planning", "Public Engagement"],
+    link: "/videos/Miami-Beach-Proposal-Video-v4.mp4",
+    year: 2026,
+  },
 ];
 
 // Helper function to get projects by category
