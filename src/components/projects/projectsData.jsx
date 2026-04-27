@@ -10,7 +10,7 @@ export const projects = [
       "GrowthStack Systems is a full-stack creative agency that builds and maintains high-performing websites, content, and marketing systems—so businesses stay compliant, look sharp, and convert consistently.",
     fullDescription:
       "GrowthStack Systems is a full-stack creative agency built for consistency—helping businesses turn their digital presence into a reliable growth engine instead of a constant headache. We design, build, and manage the creative infrastructure companies rely on every day: high-performing websites, ongoing site management, content production, and the systems that keep everything updated, compliant, and converting. Our focus is long-term performance, not one-time launches. We handle the strategy, execution, and ongoing optimization that most teams don’t have time for—keeping websites fast, secure, accessible, and aligned with evolving standards while continuously improving messaging, visuals, and user experience. Whether a business needs a full rebuild or a dependable partner to keep everything running and improving month after month, GrowthStack Systems plugs in as the creative backbone that makes growth easier to sustain.",
-    image_url: "/img/CreativeMindsStudios.png",
+    image_url: "/img/growthstack-systems-site.png",
     tags: ["Wordpress", "Base 44 - AI", "Lead Capture"],
     link: "https://www.growthstack-systems.com",
     featured: true,
