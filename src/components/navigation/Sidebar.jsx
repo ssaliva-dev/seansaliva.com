@@ -15,14 +15,12 @@ import {
   Mail,
   Menu,
   X,
-  ChevronRight,
-  Figma
+  ChevronRight
 } from 'lucide-react';
 
 const navItems = [
   { name: 'Home', icon: Home, page: 'Home' },
   { name: 'Web Design', icon: Globe, page: 'WebDesign' },
-  { name: 'UI/UX Design', icon: Figma, page: 'UIUXDesign' },
   { name: 'Graphic Design', icon: Palette, page: 'GraphicDesign' },
   { name: 'Video Production', icon: Video, page: 'VideoProduction' },
   { name: 'Podcast', icon: Mic, page: 'Podcast' },

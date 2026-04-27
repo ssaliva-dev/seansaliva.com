@@ -41,7 +41,7 @@ export const competencyCards = [
     title: "Public-Facing UX & Accessibility",
     description:
       "Citizen-first experiences built for clarity, accessibility, trust, and faster task completion.",
-    page: "UIUXDesign",
+    page: "WebDesign",
     gradient: "from-indigo-500 to-cyan-500",
   },
   {

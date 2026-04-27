@@ -34,7 +34,7 @@ export const projects = [
   {
     id: "3",
     title: "Life Extension E-Commerce Site",
-    category: "ui_ux_design",
+    category: "web_design",
     description:
       "As a UI/UX Designer at Life Extension, I designed and optimized website experiences within the Sitecore CMS—creating clean, conversion-focused layouts and reusable components.",
     fullDescription:

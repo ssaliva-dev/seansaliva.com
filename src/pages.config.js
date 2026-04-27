@@ -5,7 +5,6 @@ import Home from './pages/Home';
 import Podcast from './pages/Podcast';
 import ProjectDetail from './pages/ProjectDetail';
 import Resume from './pages/Resume';
-import UIUXDesign from './pages/UIUXDesign';
 import VideoProduction from './pages/VideoProduction';
 import WebDesign from './pages/WebDesign';
 import __Layout from './Layout.jsx';
@@ -19,7 +18,6 @@ export const PAGES = {
     "Podcast": Podcast,
     "ProjectDetail": ProjectDetail,
     "Resume": Resume,
-    "UIUXDesign": UIUXDesign,
     "VideoProduction": VideoProduction,
     "WebDesign": WebDesign,
 }
