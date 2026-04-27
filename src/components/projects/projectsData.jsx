@@ -10,7 +10,7 @@ export const projects = [
       "GrowthStack Systems is a full-stack creative agency that builds and maintains high-performing websites, content, and marketing systems—so businesses stay compliant, look sharp, and convert consistently.",
     fullDescription:
       "GrowthStack Systems is a full-stack creative agency built for consistency—helping businesses turn their digital presence into a reliable growth engine instead of a constant headache. We design, build, and manage the creative infrastructure companies rely on every day: high-performing websites, ongoing site management, content production, and the systems that keep everything updated, compliant, and converting. Our focus is long-term performance, not one-time launches. We handle the strategy, execution, and ongoing optimization that most teams don’t have time for—keeping websites fast, secure, accessible, and aligned with evolving standards while continuously improving messaging, visuals, and user experience. Whether a business needs a full rebuild or a dependable partner to keep everything running and improving month after month, GrowthStack Systems plugs in as the creative backbone that makes growth easier to sustain.",
-    image_url: "/img/growthstack-systems-site.png",
+    image_url: "/img/growthstack-systems-site-2026-04-27.png",
     tags: ["Wordpress", "Base 44 - AI", "Lead Capture"],
     link: "https://www.growthstack-systems.com",
     featured: true,
@@ -115,9 +115,9 @@ export const projects = [
       "Designed and developed the AI Systems Builders website to clearly present automation services, build trust quickly, and guide visitors toward conversion actions.",
     fullDescription:
       "Built the AI Systems Builders website as a clean, conversion-focused platform that explains complex AI automation services in plain language and directs prospects toward the next step. The project focused on strong messaging hierarchy, clear service pathways, fast-loading page structure, and responsive layouts that maintain visual clarity across devices. From landing experience to call-to-action flow, the site is structured to reinforce credibility and make it easy for business owners to understand offerings and request a consultation.",
-    image_url: "/img/ai-systems-builders-site.png",
+    image_url: "/img/ai-systems-builders-site-2026-04-27.png",
     tags: ["Wordpress", "Automation", "Lead Generation", "UI/UX Design"],
-    link: "https://www.aissystemsbuilders.com",
+    link: "https://www.aisystemsbuilders.com",
     featured: true,
     year: 2026,
   },
@@ -129,7 +129,7 @@ export const projects = [
       "Designed and developed the Big Dog Apparel e-commerce website to showcase bold streetwear products and drive product discovery through a clear shopping experience.",
     fullDescription:
       "Built Big Dog Apparel as a modern e-commerce website focused on brand identity, merchandising clarity, and conversion flow. The project combined strong visual direction with practical shopping UX, making it easy for customers to browse collections, evaluate products, and complete purchases across desktop and mobile. From homepage storytelling to product navigation and call-to-action structure, the site is designed to support growth while keeping the brand's voice strong and consistent.",
-    image_url: "/img/big-dog-apparel-site.png",
+    image_url: "/img/big-dog-apparel-site-2026-04-27.png",
     tags: ["E-commerce", "UI/UX Design", "Brand Experience", "Conversion Focus"],
     link: "https://www.bigdogapparel.co",
     featured: true,
