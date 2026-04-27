@@ -2,17 +2,17 @@
 export const projects = [
   // Example projects - replace with your own
   {
-    link: "https://www.fdotsafetyresources.com",
+    link: "https://www.growthstack-systems.com",
     id: "1",
-    title: "Creative Minds Studios",
+    title: "GrowthStack Systems",
     category: "web_design",
     description:
-      "Creative Minds Studios is a full-stack creative agency that builds and maintains high-performing websites, content, and marketing systems—so businesses stay compliant, look sharp, and convert consistently.",
+      "GrowthStack Systems is a full-stack creative agency that builds and maintains high-performing websites, content, and marketing systems—so businesses stay compliant, look sharp, and convert consistently.",
     fullDescription:
-      "Creative Minds Studios is a full-stack creative agency built for consistency—helping businesses turn their digital presence into a reliable growth engine instead of a constant headache. We design, build, and manage the creative infrastructure companies rely on every day: high-performing websites, ongoing site management, content production, and the systems that keep everything updated, compliant, and converting. Our focus is long-term performance, not one-time launches. We handle the strategy, execution, and ongoing optimization that most teams don’t have time for—keeping websites fast, secure, accessible, and aligned with evolving standards while continuously improving messaging, visuals, and user experience. Whether a business needs a full rebuild or a dependable partner to keep everything running and improving month after month, Creative Minds Studios plugs in as the creative backbone that makes growth easier to sustain.",
+      "GrowthStack Systems is a full-stack creative agency built for consistency—helping businesses turn their digital presence into a reliable growth engine instead of a constant headache. We design, build, and manage the creative infrastructure companies rely on every day: high-performing websites, ongoing site management, content production, and the systems that keep everything updated, compliant, and converting. Our focus is long-term performance, not one-time launches. We handle the strategy, execution, and ongoing optimization that most teams don’t have time for—keeping websites fast, secure, accessible, and aligned with evolving standards while continuously improving messaging, visuals, and user experience. Whether a business needs a full rebuild or a dependable partner to keep everything running and improving month after month, GrowthStack Systems plugs in as the creative backbone that makes growth easier to sustain.",
     image_url: "/img/CreativeMindsStudios.png",
     tags: ["Wordpress", "Base 44 - AI", "Lead Capture"],
-    link: "https://www.thecreativemindsstudios.com",
+    link: "https://www.growthstack-systems.com",
     featured: true,
     year: 2026,
   },
