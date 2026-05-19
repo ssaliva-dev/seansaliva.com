@@ -7,6 +7,7 @@ import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } 
 import { 
   Home, 
   Globe, 
+  Github,
   Palette, 
   Video, 
   Mic,
@@ -21,6 +22,7 @@ import {
 const navItems = [
   { name: 'Home', icon: Home, page: 'Home' },
   { name: 'Web Design', icon: Globe, page: 'WebDesign' },
+  { name: 'GitHub', icon: Github, page: 'GitHubProjects' },
   { name: 'Graphic Design', icon: Palette, page: 'GraphicDesign' },
   { name: 'Video Production', icon: Video, page: 'VideoProduction' },
   { name: 'Podcast', icon: Mic, page: 'Podcast' },
