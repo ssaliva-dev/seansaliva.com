@@ -37,7 +37,7 @@ export default function ProjectDetail() {
           className="mb-8"
         >
           <Link to={createPageUrl('Home')}>
-            <Button variant="ghost" className="text-slate-400 hover:text-white">
+            <Button variant="ghost" className="text-slate-500 hover:text-slate-900">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back
             </Button>

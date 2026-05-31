@@ -17,6 +17,12 @@ const GITHUB_USERNAME = 'ssaliva-dev';
 const PROFILE_URL = `https://github.com/${GITHUB_USERNAME}`;
 const PROFILE_API_URL = `https://api.github.com/users/${GITHUB_USERNAME}`;
 const REPOS_API_URL = `${PROFILE_API_URL}/repos?sort=updated&direction=desc&per_page=100`;
+const REPO_DESCRIPTION_OVERRIDES = {
+  'supportops-ai':
+    'AI support operations platform that automates triage, context-aware response drafting, and human-in-the-loop workflow execution.',
+  'supptops-ai':
+    'AI support operations platform that automates triage, context-aware response drafting, and human-in-the-loop workflow execution.',
+};
 
 const formatDate = (dateString) =>
   new Intl.DateTimeFormat('en', {
@@ -37,6 +43,15 @@ const getLanguageColor = (language) => {
   };
 
   return colors[language] || 'bg-purple-400';
+};
+
+const getRepoDescription = (repo) => {
+  const repoName = (repo.name || '').toLowerCase();
+  return (
+    REPO_DESCRIPTION_OVERRIDES[repoName] ||
+    repo.description ||
+    'A public repository from the GitHub project workspace.'
+  );
 };
 
 export default function GitHubProjects() {
@@ -301,9 +316,7 @@ function RepositoryCard({ repo, index }) {
         )}
       </div>
 
-      <p className="mb-5 min-h-16 text-sm leading-6 text-slate-400">
-        {repo.description || 'A public repository from the GitHub project workspace.'}
-      </p>
+      <p className="mb-5 min-h-16 text-sm leading-6 text-slate-400">{getRepoDescription(repo)}</p>
 
       <div className="mb-5 flex flex-wrap gap-2">
         {repo.language && (

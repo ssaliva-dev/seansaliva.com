@@ -62,9 +62,9 @@ export default function ImageGallery({ images }) {
             {/* Close Button */}
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-10"
+              className="absolute top-4 right-4 p-2 rounded-full bg-white/10 text-white hover:bg-white hover:text-slate-900 transition-colors z-10"
             >
-              <X className="w-6 h-6 text-white" />
+              <X className="w-6 h-6" />
             </button>
 
             {/* Previous Button */}
@@ -74,9 +74,9 @@ export default function ImageGallery({ images }) {
                   e.stopPropagation();
                   showPrevious();
                 }}
-                className="absolute left-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-10"
+                className="absolute left-4 p-2 rounded-full bg-white/10 text-white hover:bg-white hover:text-slate-900 transition-colors z-10"
               >
-                <ChevronLeft className="w-6 h-6 text-white" />
+                <ChevronLeft className="w-6 h-6" />
               </button>
             )}
 
@@ -87,9 +87,9 @@ export default function ImageGallery({ images }) {
                   e.stopPropagation();
                   showNext();
                 }}
-                className="absolute right-4 p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors z-10"
+                className="absolute right-4 p-2 rounded-full bg-white/10 text-white hover:bg-white hover:text-slate-900 transition-colors z-10"
               >
-                <ChevronRight className="w-6 h-6 text-white" />
+                <ChevronRight className="w-6 h-6" />
               </button>
             )}
 
