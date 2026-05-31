@@ -1,6 +1,5 @@
 import AIAutomation from './pages/AIAutomation';
 import Contact from './pages/Contact';
-import GraphicDesign from './pages/GraphicDesign';
 import GitHubProjects from './pages/GitHubProjects';
 import Home from './pages/Home';
 import Podcast from './pages/Podcast';
@@ -14,7 +13,6 @@ import __Layout from './Layout.jsx';
 export const PAGES = {
     "AIAutomation": AIAutomation,
     "Contact": Contact,
-    "GraphicDesign": GraphicDesign,
     "GitHubProjects": GitHubProjects,
     "Home": Home,
     "Podcast": Podcast,

@@ -65,7 +65,7 @@ export const competencyCards = [
     title: "Regulated Environment Execution",
     description:
       "Digital systems and front-end delivery across municipal, financial, and compliance-heavy environments.",
-    page: "GraphicDesign",
+    page: "Resume",
     gradient: "from-purple-500 to-pink-500",
   },
   {

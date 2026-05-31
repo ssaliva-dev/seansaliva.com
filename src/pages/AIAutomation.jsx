@@ -12,8 +12,8 @@ export default function AIAutomation() {
       <div className="max-w-6xl mx-auto">
         <SectionHeader
           icon={Bot}
-          title="AI Automation"
-          subtitle="Leveraging artificial intelligence to streamline workflows, automate processes, and create innovative solutions."
+          title="AI Development"
+          subtitle="Building AI-powered applications, agents, and workflows through an AI development process."
         />
 
         <ProjectsGrid projects={projects} isLoading={false} />

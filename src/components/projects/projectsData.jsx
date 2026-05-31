@@ -171,6 +171,20 @@ export const projects = [
     year: 2025,
   },
   {
+    id: "22",
+    title: "AI SupportOps",
+    category: "ai_automation",
+    description:
+      "Built AI SupportOps, an AI support agent created through an AI development process to automate support triage and response workflows.",
+    fullDescription:
+      "AI SupportOps is a deployed AI support agent application built with an AI-first development process, focused on faster support operations through automated triage, response drafting, and streamlined workflow handling.",
+    image_url: "/img/Blog-Automation.png",
+    tags: ["AI Support Agent", "AI Development", "SupportOps", "Vercel"],
+    link: "https://supportops-ai-delta.vercel.app/",
+    featured: true,
+    year: 2026,
+  },
+  {
     id: "14",
     title: "FDOT Golden Glades Interchange Work Program Video",
     category: "video_production",
