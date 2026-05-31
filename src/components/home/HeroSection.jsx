@@ -48,10 +48,10 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight"
         >
-          Government Technology
+          AI Developer
           <br />
           <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Leadership & Digital Delivery
+            Building AI Products & Workflows
           </span>
         </motion.h1>
 
