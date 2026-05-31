@@ -19,12 +19,12 @@ import {
 } from 'lucide-react';
 
 const navItems = [
+  { name: 'AI Development', icon: Bot, page: 'AIAutomation' },
   { name: 'Home', icon: Home, page: 'Home' },
   { name: 'Web Design', icon: Globe, page: 'WebDesign' },
   { name: 'GitHub', icon: Github, page: 'GitHubProjects' },
   { name: 'Video Production', icon: Video, page: 'VideoProduction' },
   { name: 'Podcast', icon: Mic, page: 'Podcast' },
-  { name: 'AI Development', icon: Bot, page: 'AIAutomation' },
   { name: 'Resume', icon: FileText, page: 'Resume' },
   { name: 'Contact', icon: Mail, page: 'Contact' },
 ];

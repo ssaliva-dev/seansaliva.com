@@ -1,8 +1,8 @@
 export const profile = {
   name: "Sean O. Saliva",
   shortName: "Sean Saliva",
-  role: "Director of Digital Services",
-  tagline: "Government Technology Leader",
+  role: "AI Product & Application Developer",
+  tagline: "AI Workflow Architect",
   location: "Fort Lauderdale, FL",
   phone: "(954) 709-7709",
   phoneHref: "tel:+19547097709",
@@ -12,19 +12,19 @@ export const profile = {
   websiteLabel: "seansaliva.com",
   linkedin: "https://www.linkedin.com/in/sean-saliva-ba45a43b8/",
   linkedinLabel: "linkedin.com/in/sean-saliva-ba45a43b8",
-  resumePath: "/resumes/Sean-Saliva-GovTech-2026-v2.pdf",
+  resumePath: "/resumes/Sean_Saliva_AI_Resume_AI_Focused_Professional_2Page.pdf",
   availability:
-    "Open to digital services leadership, civic technology, and modernization opportunities.",
+    "Open to AI product, application development, workflow architecture, and digital strategy leadership opportunities.",
   summary:
-    "Municipal technology leader with 25+ years of digital infrastructure experience and direct city government service as the City of Tamarac Webmaster & Digital Infrastructure Specialist.",
+    "AI-focused product and application builder with 25+ years shipping public-facing digital platforms, regulated UX systems, LLM-augmented workflows, and business-critical infrastructure.",
   extendedSummary:
-    "Designed, built, and deployed TamaracTV, a citywide live broadcast platform and multi-site digital display network recognized with the City of Tamarac Excellence in Innovation Award (2024). Partners directly with executive stakeholders to move digital initiatives from concept through deployment across municipal, financial, e-commerce, and public-facing environments.",
+    "Combines hands-on React/TypeScript/Node development with product strategy, systems thinking, stakeholder leadership, and compliance-aware delivery. Proven ability to move from ambiguous business problem to deployed product across TamaracTV, Civic Central, AI production pipelines, fintech chatbot flows, high-traffic e-commerce experiences, and municipal digital systems.",
 };
 
 export const heroStats = [
-  { value: "25+", label: "Years in Digital Infrastructure" },
-  { value: "2024", label: "Innovation Award" },
-  { value: "18", label: "Years of Operations Leadership" },
+  { value: "25+", label: "Years Shipping Digital Products" },
+  { value: "60%+", label: "Civic Central Viewer Retention" },
+  { value: "3-5x", label: "Faster Creative Turnaround" },
 ];
 
 export const competencyCards = [
@@ -79,22 +79,50 @@ export const competencyCards = [
 ];
 
 export const coreCompetencies = [
-  "Municipal Digital Infrastructure Management",
-  "Cross-Department & CIO-Level Stakeholder Coordination",
-  "Government CMS Platforms (CivicPlus, Sitecore)",
-  "Public-Facing UX & WCAG Accessibility Compliance",
-  "Public Safety Technology Coordination",
-  "Citywide Broadcast & Digital Display Systems",
-  "AI-Augmented Application Development",
-  "Vendor & Contract Management",
-  "Budget Planning & Procurement Management",
-  "Agile / Scrum",
-  "Project Management",
+  "AI Application Development (OpenAI APIs, Anthropic Claude APIs)",
+  "LLM Workflow Design & Prompt Systems",
+  "AI-Assisted Development & Human-in-the-Loop Production Systems",
+  "Product Discovery, Roadmapping, and Technical Product Strategy",
+  "React, TypeScript, JavaScript, Node.js, and Component-Based UI",
+  "CMS Platforms, Municipal Digital Infrastructure, and Broadcast Systems",
+  "FINRA-Regulated Workflows and Compliance-Aware UX Delivery",
+  "WCAG 2.1 AA Accessibility and Public-Records-Sensitive Delivery",
+  "Analytics Instrumentation and Product-Market Validation",
+  "Vendor Management, Procurement, and Executive Stakeholder Alignment",
+  "Design and Content Operations (Figma, Adobe Creative Suite, Premiere Pro, After Effects)",
 ];
 
 export const experiences = [
   {
     id: "1",
+    company: "Creative Minds Studios",
+    role: "Lead Consultant - Product, AI & Digital Strategy",
+    start: "November 2024",
+    end: "Present",
+    location: "Fort Lauderdale, FL",
+    bullets: [
+      "Lead an independent AI product and application-development practice, turning civic-information, content-operations, and government-adjacent business problems into shipped AI-assisted workflows, digital products, and production systems.",
+      "Architected a proprietary LLM production pipeline using OpenAI/Claude-assisted scripting, prompt-chain workflows, AI-assisted editing, reusable content modules, human QA gates, and automated publishing operations; reduced creative turnaround 3-5x while preserving compliance-grade review standards.",
+      "Founded and operate Civic Central as a deployed AI-enabled civic-information product with 60%+ average viewer retention; own product strategy, workflow architecture, analytics instrumentation, distribution systems, and continuous iteration from user data.",
+      "Prototype and ship AI-assisted application layers for research synthesis, script generation, content transformation, editorial operations, and multi-platform publishing.",
+    ],
+  },
+  {
+    id: "2",
+    company: "Infinite Source Communications",
+    role: "Strategic Creative & Web Partner",
+    type: "Government Contracting / Public Relations",
+    start: "2010",
+    end: "Present",
+    location: "South Florida",
+    bullets: [
+      "Serve as a long-term AI-forward creative and technical partner for government-contracting communications, converting federal-audience messaging and campaign assets into reusable, automation-ready content systems.",
+      "Build web platforms, brand systems, agency-day decks, capability statements, and integrated digital/print campaigns with structured content models that support rapid customization and AI-assisted drafting.",
+      "Develop procurement-aligned messaging frameworks and knowledge assets for federal-facing clients, enabling retrieval-augmented content workflows and AI-assisted business development operations.",
+    ],
+  },
+  {
+    id: "3",
     company: "City of Tamarac",
     role: "Webmaster & Digital Infrastructure Specialist",
     type: "Direct Municipal Employment",
@@ -111,66 +139,53 @@ export const experiences = [
     ],
   },
   {
-    id: "2",
-    company: "Creative Minds Studios",
-    role: "Multimedia Specialist & AI Product Builder",
-    start: "May 2023",
-    end: "Present",
-    location: "Fort Lauderdale, FL",
-    bullets: [
-      "Developed and deployed AI-augmented applications using Claude Code and OpenAI Codex to accelerate build cycles and reduce time-to-ship for client projects.",
-      "Architected content systems that blend SEO strategy, lead capture, and marketing automation for municipal and commercial clients.",
-      "Managed 6+ simultaneous production websites spanning design, development, email campaigns, and 360-degree virtual tour production.",
-    ],
-  },
-  {
-    id: "3",
+    id: "4",
     company: "All Clear Decisioning",
     role: "Senior UI/UX Designer & Developer",
     type: "Contract",
     start: "November 2022",
-    end: "January 2023",
+    end: "July 2023",
     location: "Fort Lauderdale, FL",
     bullets: [
-      "Built a full chatbot module UI from wireframes through production for a regulated fintech decisioning platform using React, TypeScript, and Bootstrap 5.",
-      "Delivered responsive application layouts and compliant UX flows in a financial technology environment with strict regulatory requirements.",
+      "Built a production chatbot decisioning module from wireframes through implementation for a regulated fintech platform using React, TypeScript, and Bootstrap 5.",
+      "Delivered responsive application layouts, compliant UX flows, and front-end product surfaces in a strict financial-services environment.",
     ],
   },
   {
-    id: "4",
+    id: "5",
     company: "Life Extension Buyers Club, Inc.",
     role: "UI/UX Designer & Developer",
     start: "July 2019",
     end: "October 2022",
     location: "Fort Lauderdale, FL",
     bullets: [
-      "Owned front-end design and development for one of the largest supplement e-commerce platforms in the US, serving millions of monthly users within Sitecore CMS.",
-      "Ran A/B testing programs with marketing teams, driving measurable gains in conversion and user engagement across high-traffic product pages.",
+      "Owned front-end product surfaces for one of the largest U.S. supplement e-commerce platforms, serving millions of monthly users in a Sitecore-driven enterprise stack.",
+      "Partnered with growth and merchandising teams on structured A/B testing programs that improved conversion and engagement across high-traffic product experiences.",
     ],
   },
   {
-    id: "5",
+    id: "6",
     company: "Investacorp, Inc.",
-    role: "Front End Developer & Graphic Designer",
+    role: "Front-End Developer & Brand Systems Lead",
     type: "FINRA-Regulated Financial Broker/Dealer",
     start: "November 2010",
     end: "April 2014",
     location: "Miami, FL",
     bullets: [
       "Led the full UI/UX overhaul of investalink.com, a complex web application for financial advisors in a compliance-heavy environment.",
-      "Delivered responsive development, financial report design, document systems, motion graphics, video production, and brand assets for a regulated broker/dealer.",
+      "Delivered responsive development, financial reporting interfaces, document workflows, motion graphics, and a full brand system for a regulated broker/dealer.",
     ],
   },
   {
-    id: "6",
+    id: "7",
     company: "Johnson Aluminum Product",
-    role: "General Manager / Operations Director / Digital & Marketing Lead",
+    role: "Operations Director / Digital & Marketing Lead",
     start: "March 1998",
     end: "July 2016",
     location: "Fort Lauderdale, FL",
     bullets: [
       "Led day-to-day operations for 18 years, managing staff, customer acquisition, vendor relationships, cross-department coordination, and revenue for a multi-department manufacturing business.",
-      "Simultaneously served as Marketing Manager and Web Developer, building and managing all digital properties, brand assets, and marketing collateral.",
+      "Owned digital, brand, and marketing systems, creating an early foundation for the business-plus-technical operator profile used in current AI and product work.",
     ],
   },
 ];
