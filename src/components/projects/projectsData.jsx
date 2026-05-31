@@ -178,7 +178,7 @@ export const projects = [
       "Built AI SupportOps, an AI support agent created through an AI development process to automate support triage and response workflows.",
     fullDescription:
       "AI SupportOps is a deployed AI support agent application built with an AI-first development process, focused on faster support operations through automated triage, response drafting, and streamlined workflow handling.",
-    image_url: "/img/Blog-Automation.png",
+    image_url: "/img/ai-supportops-site-2026-05-31.png",
     tags: ["AI Support Agent", "AI Development", "SupportOps", "Vercel"],
     link: "https://supportops-ai-delta.vercel.app/",
     featured: true,
