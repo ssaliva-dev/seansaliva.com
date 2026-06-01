@@ -185,6 +185,20 @@ export const projects = [
     year: 2026,
   },
   {
+    id: "23",
+    title: "ShipGuard AI",
+    category: "ai_automation",
+    description:
+      "Built ShipGuard AI, an AI-powered application developed to streamline shipping protection workflows, improve response consistency, and accelerate operational decision support.",
+    fullDescription:
+      "ShipGuard AI is a production-focused AI application built through an AI-first development process to improve shipping-related workflow efficiency, reduce manual overhead, and increase consistency across operations. The platform is designed to assist with triage and shipping-protection decisions through context-aware automation, structured recommendations, and clear human-in-the-loop checkpoints so teams can maintain quality while moving faster. From product architecture to deployment, the solution emphasizes practical execution over experimentation by turning repetitive shipping operations into reusable AI workflows that scale. The result is faster turnaround on support and operations tasks, stronger process reliability, and a clearer operational framework for handling high-volume shipping scenarios with better confidence.",
+    image_url: "/img/shipguard-ai-site-2026-05-31.png",
+    tags: ["AI Application", "AI Development", "Shipping Operations", "Vercel"],
+    link: "https://shipguard-ai.vercel.app/",
+    featured: true,
+    year: 2026,
+  },
+  {
     id: "14",
     title: "FDOT Golden Glades Interchange Work Program Video",
     category: "video_production",
