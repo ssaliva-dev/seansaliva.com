@@ -33,7 +33,7 @@ export default function Resume() {
         <SectionHeader
           icon={FileText}
           title="Resume"
-          subtitle="AI product development, workflow architecture, and compliance-aware digital delivery across 25+ years of execution."
+          subtitle="AI solutions architecture, agentic workflow engineering, and compliance-aware digital delivery across 25+ years of execution."
         />
 
         {/* Profile Card */}
@@ -137,7 +137,7 @@ export default function Resume() {
           <GlassCard className="p-6" hover={false}>
             <h3 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
               <Award className="w-6 h-6 text-cyan-400" />
-              Core Competencies
+              Areas of Expertise
             </h3>
             <div className="flex flex-wrap gap-2">
               {coreCompetencies.map((skill) => (
@@ -277,23 +277,25 @@ export default function Resume() {
               </div>
             </GlassCard>
 
-            <GlassCard className="p-6" hover={false}>
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                <Users className="w-6 h-6 text-cyan-400" />
-                Honors & Organizations
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {organizations.map((organization) => (
-                  <Badge
-                    key={organization}
-                    variant="outline"
-                    className="border-slate-700 text-slate-400 text-xs"
-                  >
-                    {organization}
-                  </Badge>
-                ))}
-              </div>
-            </GlassCard>
+            {organizations.length > 0 ? (
+              <GlassCard className="p-6" hover={false}>
+                <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                  <Users className="w-6 h-6 text-cyan-400" />
+                  Honors & Organizations
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {organizations.map((organization) => (
+                    <Badge
+                      key={organization}
+                      variant="outline"
+                      className="border-slate-700 text-slate-400 text-xs"
+                    >
+                      {organization}
+                    </Badge>
+                  ))}
+                </div>
+              </GlassCard>
+            ) : null}
           </div>
         </div>
       </div>
