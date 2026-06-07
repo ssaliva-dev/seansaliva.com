@@ -3,9 +3,7 @@ import { pagesConfig } from './pages.config'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 
-const { Pages, Layout, mainPage } = pagesConfig;
-const mainPageKey = mainPage ?? Object.keys(Pages)[0];
-const MainPage = mainPageKey ? Pages[mainPageKey] : <></>;
+const { Pages, Layout, routes } = pagesConfig;
 
 const LayoutWrapper = ({ children, currentPageName }) => Layout ?
   <Layout currentPageName={currentPageName}>{children}</Layout>
@@ -18,17 +16,12 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={
-            <LayoutWrapper currentPageName={mainPageKey}>
-              <MainPage />
-            </LayoutWrapper>
-          } />
-          {Object.entries(Pages).map(([path, Page]) => (
+          {Object.entries(Pages).map(([pageName, Page]) => (
             <Route
-              key={path}
-              path={`/${path}`}
+              key={pageName}
+              path={routes?.[pageName] ?? `/${pageName}`}
               element={
-                <LayoutWrapper currentPageName={path}>
+                <LayoutWrapper currentPageName={pageName}>
                   <Page />
                 </LayoutWrapper>
               }

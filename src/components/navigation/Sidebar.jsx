@@ -11,6 +11,7 @@ import {
   Video, 
   Mic,
   Bot, 
+  BrainCircuit,
   FileText, 
   Mail,
   Menu,
@@ -20,6 +21,7 @@ import {
 
 const navItems = [
   { name: 'Home', icon: Home, page: 'Home' },
+  { name: 'AI Engineering', icon: BrainCircuit, page: 'AIEngineering' },
   { name: 'AI Development', icon: Bot, page: 'AIAutomation' },
   { name: 'Web Design', icon: Globe, page: 'WebDesign' },
   { name: 'GitHub', icon: Github, page: 'GitHubProjects' },
@@ -33,10 +35,15 @@ export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
 
+  const normalizePath = (path) => {
+    const trimmed = path.replace(/\/+$/, '');
+    return (trimmed || '/').toLowerCase();
+  };
+
   const isActive = (page) => {
-    const currentPath = location.pathname;
-    if (page === 'Home' && currentPath === '/') return true;
-    return currentPath.toLowerCase().includes(page.toLowerCase());
+    const currentPath = normalizePath(location.pathname);
+    const targetPath = normalizePath(createPageUrl(page));
+    return currentPath === targetPath;
   };
 
   return (
@@ -146,7 +153,7 @@ export default function Sidebar() {
         <div className="absolute bottom-0 left-0 right-0 p-6 border-t border-slate-800/50">
         <div className="flex items-center justify-center gap-2 text-slate-500 text-xs">
           <div className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
-          <span>25+ Years in Digital Leadership</span>
+          <span>25+ Years of Digital Delivery</span>
         </div>
       </div>
     </aside>

@@ -33,7 +33,7 @@ export default function Resume() {
         <SectionHeader
           icon={FileText}
           title="Resume"
-          subtitle="AI solutions architecture, agentic workflow engineering, and compliance-aware digital delivery across 25+ years of execution."
+          subtitle="AI product engineering, workflow automation, and compliance-aware digital delivery across 25+ years of execution."
         />
 
         {/* Profile Card */}

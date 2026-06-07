@@ -30,7 +30,7 @@ export default function SkillsShowcase() {
             Core Competencies
           </h2>
           <p className="text-slate-400 text-lg max-w-2xl mx-auto">
-            Municipal delivery, civic UX, operational leadership, and AI-accelerated execution
+            Municipal delivery, civic UX, operational leadership, and production-minded AI engineering
           </p>
         </motion.div>
 

@@ -37,7 +37,7 @@ export default function HeroSection() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 mb-8"
         >
           <Sparkles className="w-4 h-4 text-cyan-400" />
-          <span className="text-sm text-slate-300">Open to digital leadership opportunities</span>
+          <span className="text-sm text-slate-300">Open to AI product engineering, automation, and digital delivery opportunities</span>
           <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
         </motion.div>
 
@@ -48,10 +48,10 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight"
         >
-          AI Developer
+          AI Product Engineer
           <br />
           <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-            Building AI Products & Workflows
+            & Digital Systems Builder
           </span>
         </motion.h1>
 
@@ -62,9 +62,17 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed"
         >
-          Municipal technology leader with over <span className="text-white font-semibold">25 years</span> of experience
-          building public-facing digital infrastructure, civic UX, and award-winning communication systems across
-          municipal, financial, e-commerce, and operational environments.
+          <span className="text-white font-semibold">25+ years</span> building real-world digital systems, now focused on practical AI workflows,
+          automation, RAG knowledge systems, and production-ready AI tools.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="text-base md:text-lg text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed"
+        >
+          Experienced in public-sector digital infrastructure, web platforms, stakeholder delivery, and AI-augmented application development.
         </motion.p>
 
         {/* Stats */}
@@ -91,15 +99,16 @@ export default function HeroSection() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4"
         >
-          <Link to={createPageUrl('WebDesign')}>
-            <Button 
-              size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0 px-8 py-6 text-lg rounded-xl"
-            >
-              Explore Portfolio
+          <Button
+            asChild
+            size="lg"
+            className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white border-0 px-8 py-6 text-lg rounded-xl"
+          >
+            <Link to={createPageUrl('AIEngineering')}>
+              View AI Systems Portfolio
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </Link>
+            </Link>
+          </Button>
           <Button
             asChild
             size="lg"

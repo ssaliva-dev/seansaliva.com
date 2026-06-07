@@ -1,4 +1,5 @@
 import AIAutomation from './pages/AIAutomation';
+import AIEngineering from './pages/AIEngineering';
 import Contact from './pages/Contact';
 import GitHubProjects from './pages/GitHubProjects';
 import Home from './pages/Home';
@@ -8,10 +9,12 @@ import Resume from './pages/Resume';
 import VideoProduction from './pages/VideoProduction';
 import WebDesign from './pages/WebDesign';
 import __Layout from './Layout.jsx';
+import { PAGE_PATHS } from './pagePaths';
 
 
 export const PAGES = {
     "AIAutomation": AIAutomation,
+    "AIEngineering": AIEngineering,
     "Contact": Contact,
     "GitHubProjects": GitHubProjects,
     "Home": Home,
@@ -26,4 +29,5 @@ export const pagesConfig = {
     mainPage: "Home",
     Pages: PAGES,
     Layout: __Layout,
+    routes: PAGE_PATHS,
 };

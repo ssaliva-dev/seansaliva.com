@@ -1,8 +1,8 @@
 export const profile = {
   name: "Sean O. Saliva",
   shortName: "Sean Saliva",
-  role: "AI Solutions Architect",
-  tagline: "Agentic AI Engineer",
+  role: "AI Product Engineer & Digital Systems Builder",
+  tagline: "GovTech + AI Delivery",
   location: "Fort Lauderdale, FL",
   phone: "(954) 709-7709",
   phoneHref: "tel:+19547097709",
@@ -14,11 +14,11 @@ export const profile = {
   linkedinLabel: "linkedin.com/in/sean-saliva-ba45a43b8",
   resumePath: "/resumes/Sean_Saliva_-_-1.pdf",
   availability:
-    "Open to AI solutions architecture, agentic workflow engineering, and digital transformation leadership opportunities.",
+    "Open to AI product engineering, workflow automation, and digital transformation opportunities.",
   summary:
-    "AI Solutions Architect, Agentic AI Engineer, and Digital Transformation Leader with 25+ years of experience building production-grade digital platforms, automation systems, and compliance-sensitive technology programs.",
+    "AI Product Engineer & Digital Systems Builder with 25+ years of public-sector digital delivery experience across websites, broadcast platforms, workflow tools, and compliance-sensitive infrastructure.",
   extendedSummary:
-    "Combines deep full-stack engineering, UX and product strategy, civic technology, and modern LLM orchestration to design AI workflows that reduce production cycles, improve operational decision-making, and scale high-quality digital output. Career highlights include building an award-winning municipal broadcast platform, launching AI-enabled civic media systems with 60%+ average viewer retention, and reducing creative production turnaround by 3-5x through autonomous workflow design.",
+    "Combines deep full-stack engineering, UX and product strategy, civic technology, and modern LLM orchestration to design practical AI workflows with validation, evaluation, and human oversight. Career highlights include building an award-winning municipal broadcast platform, launching AI-enabled civic media systems with 60%+ average viewer retention, and reducing creative production turnaround by 3-5x through reusable automation systems.",
 };
 
 export const heroStats = [
@@ -54,10 +54,10 @@ export const competencyCards = [
   },
   {
     key: "ai-delivery",
-    title: "AI-Augmented Delivery",
+    title: "AI Product Delivery",
     description:
-      "AI-assisted application development, workflow acceleration, and automation for faster execution.",
-    page: "AIAutomation",
+      "Practical LLM workflows, document automation, and production-minded implementation.",
+    page: "AIEngineering",
     gradient: "from-violet-500 to-purple-500",
   },
   {
