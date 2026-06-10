@@ -9,43 +9,48 @@ export default function ImageGallery({ images }) {
   const closeLightbox = () => setSelectedIndex(null);
 
   const showNext = () => {
-    if (selectedIndex < images.length - 1) {
-      setSelectedIndex(selectedIndex + 1);
-    }
+    setSelectedIndex((current) =>
+      current !== null && current < images.length - 1 ? current + 1 : current
+    );
   };
 
   const showPrevious = () => {
-    if (selectedIndex > 0) {
-      setSelectedIndex(selectedIndex - 1);
-    }
+    setSelectedIndex((current) => (current !== null && current > 0 ? current - 1 : current));
   };
 
   return (
     <>
       {/* Gallery Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="columns-1 gap-6 md:columns-2 lg:columns-3">
         {images.map((image, index) => (
-          <motion.div
-            key={index}
+          <motion.button
+            key={image.url || index}
+            type="button"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1 }}
-            className="group relative aspect-square overflow-hidden rounded-2xl cursor-pointer"
+            className="group mb-6 w-full break-inside-avoid overflow-hidden rounded-2xl border border-slate-700/60 bg-slate-900/80 text-left shadow-xl shadow-black/20 transition-transform duration-300 hover:-translate-y-1"
             onClick={() => openLightbox(index)}
+            aria-label={image.title ? `Open ${image.title}` : `Open gallery image ${index + 1}`}
           >
-            <img
-              src={image.url}
-              alt={image.title || `Gallery image ${index + 1}`}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <div className="absolute bottom-4 left-4 right-4">
-                {image.title && (
-                  <h3 className="text-white font-semibold text-lg">{image.title}</h3>
-                )}
-              </div>
+            <div className="relative overflow-hidden">
+              <img
+                src={image.url}
+                alt={image.title || `Gallery image ${index + 1}`}
+                loading="lazy"
+                decoding="async"
+                className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             </div>
-          </motion.div>
+            {image.title && (
+              <div className="border-t border-slate-700/60 px-4 py-3">
+                <h3 className="text-sm font-medium tracking-wide text-white/90">
+                  {image.title}
+                </h3>
+              </div>
+            )}
+          </motion.button>
         ))}
       </div>
 

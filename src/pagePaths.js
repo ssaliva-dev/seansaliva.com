@@ -3,6 +3,7 @@ export const PAGE_PATHS = {
   AIAutomation: '/AIAutomation',
   AIEngineering: '/ai-engineering',
   WebDesign: '/WebDesign',
+  GraphicDesign: '/GraphicDesign',
   GitHubProjects: '/GitHubProjects',
   VideoProduction: '/VideoProduction',
   Podcast: '/Podcast',
